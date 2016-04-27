@@ -1,0 +1,288 @@
+/***********************************************************
+                       Home Page
+************************************************************/
+/*   3     #    */
+
+
+.wrapper {
+	min-height: calc(100vh - 106px);
+	width: 100%;
+
+	header {
+		text-align: center;
+		background-color: #9BE4C8;
+	    box-shadow: 0px 1px 39px #888888;
+
+		h1 {
+			margin: 0;
+			font-size: 80px;
+			padding: 25px 0;
+		}
+
+		ul {
+			width: 80%;
+			margin: 0 auto;
+			height: 75px;
+
+			li {
+				display: inline-block;
+				height: 75px;
+				width: 150px;
+				position: relative;
+				height: 100%;
+
+				a {
+					text-decoration: none;
+					color: #000;
+					font-size: 30px;
+					position: absolute;
+					top: 21px;
+					left: 0;
+				    right: 0;
+				}
+			}
+		}
+	}
+
+	.container {
+		width: 70%;
+		height:calc(100vh - 106px - 217px);
+		margin: 0 auto;
+		position: relative
+	}
+}
+
+footer {
+	text-align: center;
+	background-color: #9BE4C8;
+    box-shadow: 0px -5px 39px #888888;
+
+	p {
+		font-size: 40px;
+		color: #fff;
+		font-weight: bold;
+		padding: 30px 0;
+		margin: 0;
+	}
+}
+
+.selected {
+	background-color: #E3E3E3;
+}
+
+
+/***********************************************************
+                         Goat Page
+************************************************************/
+/*   3     #    */
+
+
+.goat_wrap {
+	position: relative;
+}
+
+.goat_center {
+	content: '';
+	display: inline-block;
+	border: 11px solid red;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.goat_top_left {
+	content: '';
+	display: inline-block;
+	border: 11px solid red;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.goat_top_right {
+	content: '';
+	display: inline-block;
+	border: 11px solid red;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+}
+
+.goat_bottom_right {
+	content: '';
+	display: inline-block;
+	border: 11px solid red;
+	border-radius: 50%;
+	position: absolute;
+	right: 0; bottom: 0;
+}
+
+.goat_bottom_left {
+	content: '';
+	display: inline-block;
+	border: 11px solid red;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+}
+
+
+/********************************
+             Overlay 
+********************************/
+/*   3     #    */
+
+
+#overlay {
+	content: "";
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: #E3E3E3;
+	z-index: 1;
+
+	ul {
+
+		li:first-child {
+			text-align: center;
+		}
+
+		li {
+			list-style: none;
+			text-align: center;
+
+
+			h10 {
+				font-size: 50px;
+			}
+		}
+	}
+
+	> p {
+		font-size: 30px;
+		width: 85%;
+		margin: 0 auto;
+		line-height: 40px;
+	}
+
+	form {
+		bottom: 25px;
+		position: absolute;
+	    width: 100%;
+		
+		input {
+			font-size: 30px;
+			height: 30px;
+			width: 100px;
+			margin: 0 10px 0 7.5%;
+			display: inline-block;
+			float: left;
+		}
+
+		button{
+			height: 36px;
+			width: 109px;
+			font-size: 30px;
+			float: left;
+			display: inline-block;
+		}
+	}
+}
+
+.dot {
+	z-index: 2;
+}
+
+.goat {
+
+	section {
+		width: 100%;
+		display: inline-block;
+		margin: 0 auto;
+		text-align: center;
+
+		h1 {
+			text-align: center;
+			margin: 0;
+			padding-top: 50px;
+			font-size: 50px;
+			margin: 0 auto;
+		}
+
+		p {
+			text-align: center;
+			font-size: 25px;
+		    margin-top: 30px;
+		    display: block;
+		}
+	}
+}
+
+form {
+
+	p {
+			float: left;
+			margin: 0 0 0 12px;
+			display: inline;
+			font-size: 31px;
+		}
+}
+
+
+/***********************************************************
+                        Bunnies Page
+************************************************************/
+/*   3     #    */
+
+
+
+#bunnies_header {
+	padding-bottom: 18px;
+
+	nav {
+	    width: 80%;
+	    margin: 0 auto;
+	    overflow: hidden;
+
+	    select {
+		    width: 60%;
+		    float: left;
+		    display: none;
+		}
+
+		button {
+		    height: 21px;
+		    width: 43px;
+		    float: left;
+		    margin-left: 12px;
+		    display: none;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

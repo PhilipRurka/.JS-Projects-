@@ -1,0 +1,16 @@
+@media screen and (min-width: 1300px) {
+	#bunnies_header {
+
+		.ul_nav {
+			display: none;
+		}
+
+		nav {
+
+			select,
+			button {
+				display: initial;
+			}
+		}
+	}
+}

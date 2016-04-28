@@ -3,7 +3,7 @@
 ********************************/
 /*   3     #    */
 
-var $overlay = $('<div id="overlay"></div>');
+var $overlay = $('<div id="overlay" class="page_1"></div>');
 var $ul = $('<ul></ul>');
 var $li = $('<li></li>');
 var $h10 = $('<h10></h10>');
@@ -104,12 +104,16 @@ $('.dot').click(function () {
 			$input.val('');
 			$para.text('');
 			page = "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?";
-			$(this).hide(500);
-			$overlay.hide(500);
-			$(this).removeClass('goat_top_left').addClass('goat_top_right').show(200);
-			$overlay.show('500');
+			$(this).hide(200);
+			$overlay.hide(200);
+			setTimeout(function () {
+				$overlay.removeClass('page_1').addClass('page_2');
+				$('.dot').removeClass('goat_top_left').addClass('goat_top_right').show(200);
+				$overlay.show('200');
+			}, 200);
 			counter ++;
 			tf = false;
+			
 
 		} else if (counter === 2) {
 
@@ -118,8 +122,11 @@ $('.dot').click(function () {
 			page = "In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take to cover half the lake?";
 			$(this).hide(200);
 			$overlay.hide(200);
-			$(this).removeClass('goat_top_right').addClass('goat_bottom_right').show(200);
-			$overlay.show('slow');
+			setTimeout(function () {
+				$overlay.removeClass('page_2').addClass('page_3');
+				$('.dot').removeClass('goat_top_right').addClass('goat_bottom_right').show(200);
+				$overlay.show('slow');
+			}, 200);
 			counter ++;
 			tf = false;
 			
@@ -129,23 +136,30 @@ $('.dot').click(function () {
 			page = "Information.";
 			$(this).hide(200);
 			$overlay.hide(200);
-			$(this).removeClass('goat_bottom_right').addClass('goat_bottom_left').show(200);
-			$form.hide();
-			$('#overlay').show('slow');
-
+			setTimeout(function () {
+				$overlay.removeClass('page_4').addClass('page_4');
+				$('.dot').removeClass('goat_bottom_right').addClass('goat_bottom_left').show(200);
+				$form.hide();
+				$overlay.show('slow');
+		}, 200);
 			counter ++;
 		} else {
 			$(this).hide(200);
 			$overlay.hide(200);
-			$(this).removeClass('goat_bottom_left').addClass('goat_center').show(200);
-			$form.show();
-			$('section').show();
-			$page.hide();
-
+			
+			setTimeout(function () {
+				$('.dot').removeClass('goat_bottom_left').addClass('goat_center');
+				$('.dot').show(200);
+				$form.show();
+				$('section').show();
+				$page.hide();
+			}, 200);
 			counter = 0;
 		}
-		$page.text(page);
-		$h10.text('Page ' + counter);
+		setTimeout(function () {
+			$page.text(page);
+			$h10.text('Page ' + counter);
+		}, 200)
 	}
 });
 

@@ -12,7 +12,8 @@ var $input = $('<input type="text" id="answer">');
 var $button = $('<button id="button">Submit</button>');
 var $page = $('<p></p>');
 var $para =$('<p></p>');
-var counter = 0;
+var counter = 1;
+var track = 0;
 var tf_answer;
 var tf = true;
 var answer;
@@ -55,15 +56,15 @@ $button.click(function (event) {
 	event.preventDefault();
 	answer = $input.val();
 
-	if (answer === '0.5' || answer === '0.5$' || answer === '.5' || answer === '.5$' && counter === 0) {
+	if ((answer === '0.05' || answer === '0.05$' || answer === '.05' || answer === '.05$') && counter === 1) {
 		tf_answer = true;
 		right_answer();
 
-	} else if (answer === '5' || answer === '5min' || answer === '5 min' || answer === '5minut' || answer == '5minutes' && counter === 1 || answer === '5 minut' || answer === '5 minutes' && counter === 1) {
+	} else if ((answer === '5' || answer === '5min' || answer === '5 min' || answer === '5minut' || answer == '5minutes' || answer === '5 minut' || answer === '5 minutes') && counter === 2) {
 		tf_answer = true;
 		right_answer();
 
-	} else if (answer === '47' || answer === 'day 47' || answer === 'day47' || answer === '47day' || answer === '47 day' || answer === '47days' || answer === '47 days' && counter === 2) {
+	} else if ((answer === '47' || answer === 'day 47' || answer === 'day47' || answer === '47day' || answer === '47 day' || answer === '47days' || answer === '47 days') && counter === 3) {
 		tf_answer = true;
 		right_answer();
 
@@ -76,9 +77,11 @@ $button.click(function (event) {
 
 function right_answer() {
 	if (tf_answer) {
-		$para.text('Well Done!');
+		$para.text('Well Done! It took you '+ track +' try(s).');
 		tf = true;
+		counter ++;
 	} else {
+		track ++;
 		$para.text('Wrong. Try Again!')
 	}
 
@@ -87,8 +90,9 @@ function right_answer() {
 
 $('.dot').click(function () {
 	if (tf) {	
-		if(counter === 0) {
+		if(counter === 1) {
 
+			track ++;
 			$input.val('');
 			$para.text('');
 			page = "A bat and a ball cost one dollar and ten cents. The bat cost one dollar more then the ball. How much does the ball cost?";
@@ -96,54 +100,61 @@ $('.dot').click(function () {
 			$page.show(200);
 			$('#overlay').show('200');
 			$(this).removeClass('goat_center').addClass('goat_top_left').show(200);
-			counter ++;
 			tf = false;
 			
-		} else if (counter === 1) {
+		} else if (counter === 2) {
 		
+			track = 1;
 			$input.val('');
 			$para.text('');
 			page = "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?";
 			$(this).hide(200);
 			$overlay.hide(200);
+			
 			setTimeout(function () {
 				$overlay.removeClass('page_1').addClass('page_2');
 				$('.dot').removeClass('goat_top_left').addClass('goat_top_right').show(200);
 				$overlay.show('200');
 			}, 200);
-			counter ++;
+
 			tf = false;
 			
 
-		} else if (counter === 2) {
+		} else if (counter === 3) {
 
+			track = 1;
 			$input.val('');
 			$para.text('');
 			page = "In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take to cover half the lake?";
 			$(this).hide(200);
 			$overlay.hide(200);
+			
 			setTimeout(function () {
 				$overlay.removeClass('page_2').addClass('page_3');
 				$('.dot').removeClass('goat_top_right').addClass('goat_bottom_right').show(200);
 				$overlay.show('slow');
 			}, 200);
-			counter ++;
+
 			tf = false;
 			
-		} else if (counter === 3) {
+		} else if (counter === 4) {
 
+			track = 0;
 			$para.text('');
 			page = "Information.";
 			$(this).hide(200);
 			$overlay.hide(200);
+			
 			setTimeout(function () {
 				$overlay.removeClass('page_4').addClass('page_4');
 				$('.dot').removeClass('goat_bottom_right').addClass('goat_bottom_left').show(200);
 				$form.hide();
 				$overlay.show('slow');
 		}, 200);
-			counter ++;
+
+		counter ++;
 		} else {
+			
 			$(this).hide(200);
 			$overlay.hide(200);
 			
@@ -153,8 +164,9 @@ $('.dot').click(function () {
 				$form.show();
 				$('section').show();
 				$page.hide();
+				$overlay.removeClass('page_4').addClass('page_1');
 			}, 200);
-			counter = 0;
+			counter = 1;
 		}
 		setTimeout(function () {
 			$page.text(page);
@@ -165,7 +177,7 @@ $('.dot').click(function () {
 
 
 
-
+// dissable button when right and then enable it afterwards when next stage
 
 
 

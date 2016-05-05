@@ -6,8 +6,6 @@
 var $select = $('<select></select>');
 var $button = $('<button>Go!</button>');
 
-$('#bunnies_header nav').append($select).append($button);
-
 $('#bunnies_header nav a').each(function () {
 	var $link = $(this);
 	var $option = $('<option></option>');
@@ -21,3 +19,7 @@ $button.click(function () {
 	window.location = $select.val();
 });
 
+$select.val('../index.html').prop('selected');
+
+
+$('#bunnies_header nav').append($select).append($button);

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper dogs_wrapper">
 		<header>
 		<h1>Welcome to the end of worlds!</h1>
 			<nav>
@@ -21,15 +21,29 @@
 			</nav>
 		</header>
 		<div class="container">
-			<section>
+			<section id='section_dogs'>
+			<form>
+					<p id="p_username">
+						<label for='username'>Username</label>
+						<input id='username' type='text' name='username'>
+					</p>
+					<p id="p_password">
+						<label for='password'>Password</label>
+						<input id='password' type='password' name='password'>
+					</p>
+					<p id="p_confirm">
+						<label for='confirm'>Confirm Password</label>
+						<input id='confirm' type="password" name='confirm' class="disable_gray" disabled>
+					</p>
+					<p>
+						<input type='submit' value='SUBMIT'>
+					</p>
+				</form>
 			</section>
 		</div>
 	</div>
-	<footer>
-		<p>Let me explain! This place is just to experiment!</p>
-	</footer>
 	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
-	<script src="../scripts/script.js"></script>
+	<script src="../scripts/dogs.js"></script>
 </body>
 
 </html>

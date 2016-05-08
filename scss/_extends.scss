@@ -1,0 +1,51 @@
+/***********************************************************
+                        	Mixin
+************************************************************/
+/*   3     #    */
+
+
+@mixin dogs_arrow($color) {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	margin-top: -10px;
+	border-right: 10px solid $color;
+}
+
+
+/***********************************************************
+                      Place Holders
+************************************************************/
+/*   3     #    */
+
+
+
+%goat_button {
+	content: '';
+	display: inline-block;
+	border: 11px solid red;
+	border-radius: 50%;
+	position: absolute;
+}
+
+%dogs_span {
+	position: absolute;
+    left: 96%;
+    color: #fff;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    height: 37px;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+
+
+
+

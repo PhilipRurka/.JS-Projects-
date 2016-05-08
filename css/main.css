@@ -2,6 +2,32 @@
                        Home Page
 ************************************************************/
 /*   3     #    */
+/***********************************************************
+                        	Mixin
+************************************************************/
+/*   3     #    */
+/***********************************************************
+                      Place Holders
+************************************************************/
+/*   3     #    */
+.goat_center, .goat_top_left, .goat_top_right, .goat_bottom_right, .goat_bottom_left {
+  content: '';
+  display: inline-block;
+  border: 11px solid red;
+  border-radius: 50%;
+  position: absolute; }
+
+.dogs_wrapper .container #section_dogs form p div .span_red, .dogs_wrapper .container #section_dogs form p div .span_blue {
+  position: absolute;
+  left: 96%;
+  color: #fff;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+  height: 37px;
+  font-size: 14px;
+  padding: 8px 10px; }
+
 .wrapper {
   min-height: calc(100vh - 106px);
   width: 100%; }
@@ -59,44 +85,17 @@ footer {
   position: relative; }
 
 .goat_center {
-  content: '';
-  display: inline-block;
-  border: 11px solid red;
-  border-radius: 50%;
-  position: absolute;
   top: 50%;
   left: 50%; }
 
-.goat_top_left {
-  content: '';
-  display: inline-block;
-  border: 11px solid red;
-  border-radius: 50%;
-  position: absolute; }
-
 .goat_top_right {
-  content: '';
-  display: inline-block;
-  border: 11px solid red;
-  border-radius: 50%;
-  position: absolute;
   right: 0; }
 
 .goat_bottom_right {
-  content: '';
-  display: inline-block;
-  border: 11px solid red;
-  border-radius: 50%;
-  position: absolute;
   right: 0;
   bottom: 0; }
 
 .goat_bottom_left {
-  content: '';
-  display: inline-block;
-  border: 11px solid red;
-  border-radius: 50%;
-  position: absolute;
   bottom: 0; }
 
 /********************************
@@ -295,26 +294,8 @@ footer {
           .dogs_wrapper .container #section_dogs form p div {
             display: none; }
             .dogs_wrapper .container #section_dogs form p div .span_red {
-              position: absolute;
-              left: 96%;
-              color: #fff;
-              border-radius: 5px;
-              width: 150px;
-              text-align: center;
-              height: 37px;
-              font-size: 14px;
-              padding: 8px 10px;
               background-color: #AE121D; }
             .dogs_wrapper .container #section_dogs form p div .span_blue {
-              position: absolute;
-              left: 96%;
-              color: #fff;
-              border-radius: 5px;
-              width: 150px;
-              text-align: center;
-              height: 37px;
-              font-size: 14px;
-              padding: 8px 10px;
               background-color: #2F558E;
               display: none; }
             .dogs_wrapper .container #section_dogs form p div .span_red::after {
@@ -326,8 +307,8 @@ footer {
               height: 0;
               border-top: 10px solid transparent;
               border-bottom: 10px solid transparent;
-              border-right: 10px solid #AE121D;
-              margin-top: -10px; }
+              margin-top: -10px;
+              border-right: 10px solid #AE121D; }
             .dogs_wrapper .container #section_dogs form p div .span_blue::before {
               content: '';
               position: absolute;
@@ -337,8 +318,8 @@ footer {
               height: 0;
               border-top: 10px solid transparent;
               border-bottom: 10px solid transparent;
-              border-right: 10px solid #2F558E;
-              margin-top: -10px; }
+              margin-top: -10px;
+              border-right: 10px solid #2F558E; }
             .dogs_wrapper .container #section_dogs form p div .span_blue::after {
               content: '';
               background-image: url("../img/iconmonstr-check-mark-4-32.png");

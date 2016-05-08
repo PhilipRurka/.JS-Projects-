@@ -3,6 +3,7 @@
 ************************************************************/
 /*   3     #    */
 
+@import 'extends';
 
 .wrapper {
 	min-height: calc(100vh - 106px);
@@ -82,47 +83,27 @@ footer {
 }
 
 .goat_center {
-	content: '';
-	display: inline-block;
-	border: 11px solid red;
-	border-radius: 50%;
-	position: absolute;
+	@extend %goat_button;
 	top: 50%;
 	left: 50%;
 }
 
 .goat_top_left {
-	content: '';
-	display: inline-block;
-	border: 11px solid red;
-	border-radius: 50%;
-	position: absolute;
+	@extend %goat_button;
 }
 
 .goat_top_right {
-	content: '';
-	display: inline-block;
-	border: 11px solid red;
-	border-radius: 50%;
-	position: absolute;
+	@extend %goat_button;
 	right: 0;
 }
 
 .goat_bottom_right {
-	content: '';
-	display: inline-block;
-	border: 11px solid red;
-	border-radius: 50%;
-	position: absolute;
+	@extend %goat_button;
 	right: 0; bottom: 0;
 }
 
 .goat_bottom_left {
-	content: '';
-	display: inline-block;
-	border: 11px solid red;
-	border-radius: 50%;
-	position: absolute;
+	@extend %goat_button;
 	bottom: 0;
 }
 
@@ -226,23 +207,19 @@ footer {
 }
 
 .page_1 {
-	top: 0;
-	left: 0;
+	top: 0; left: 0;
 }
 
 .page_2 {
-	top: 0;
-	right: 0;
+	top: 0; right: 0;
 }
 
 .page_3 {
-	bottom: 0;
-	right: 0;
+	bottom: 0; right: 0;
 }
 
 .page_4 {
-	bottom: 0;
-	left: 0;
+	bottom: 0; left: 0;
 }
 
 /***********************************************************
@@ -427,56 +404,22 @@ footer {
 					    display: none;
 
 						.span_red {
-							position: absolute;
-						    left: 96%;
-						    color: #fff;
-					        border-radius: 5px;
-						    width: 150px;
-						    text-align: center;
-						    height: 37px;
-						    font-size: 14px;
-						    padding: 8px 10px;
+							@extend %dogs_span;
 						    background-color: #AE121D;
 						}
 
 						.span_blue {
-							position: absolute;
-						    left: 96%;
-						    color: #fff;
-					        border-radius: 5px;
-						    width: 150px;
-						    text-align: center;
-						    height: 37px;
-						    font-size: 14px;
-						    padding: 8px 10px;
+							@extend %dogs_span;
 						    background-color: #2F558E;
 						    display: none;
 						}
 
 						.span_red::after {
-							content: '';
-							position: absolute;
-							top: 50%;
-							right: 100%;
-							width: 0; 
-							height: 0; 
-							border-top: 10px solid transparent;
-							border-bottom: 10px solid transparent; 
-							border-right:10px solid #AE121D;
-							margin-top: -10px;
+							@include dogs_arrow(#AE121D);
 						}
 
 						.span_blue::before {
-							content: '';
-							position: absolute;
-							top: 50%;
-							right: 100%;
-							width: 0; 
-							height: 0; 
-							border-top: 10px solid transparent;
-							border-bottom: 10px solid transparent; 
-							border-right:10px solid #2F558E;
-							margin-top: -10px;
+							@include dogs_arrow(#2F558E);
 						}
 
 						.span_blue::after {

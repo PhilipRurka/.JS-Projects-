@@ -17,12 +17,19 @@
 	border-right: 10px solid $color;
 }
 
+@mixin text($size, $line_height :null, $weight: null, $color: null, $text_align: null) {
+	font-size: $size;
+	line-height: $line-height;
+	font-weight: $weight;
+	color: $color;
+	text-align: $text-align;
+}
+
 
 /***********************************************************
                       Place Holders
 ************************************************************/
 /*   3     #    */
-
 
 
 %goat_button {
@@ -44,6 +51,72 @@
     font-size: 14px;
     padding: 8px 10px;
 }
+
+
+/***********************************************************
+                      	  Colors
+************************************************************/
+/*   3     #    */
+
+
+$algae_green				: #9BE4C8;
+$gray						: #888888;
+$black						: #000;
+$white 						: #fff;
+$mercury					: #E3E3E3;
+$mintcream					: mintcream;
+$bright_gray				: #384047;
+$wild_sand					: #F5F5F5;
+$emperor					: #555;
+$tamarillo					: #AE121D;
+$chambray					: #2F558E;
+
+
+/***********************************
+           Colors-Function
+************************************/
+/*   3     #    */
+
+
+$color_header						: $algae_green;
+$color_box_shadow					: $gray;
+$color_anchor						: $black;
+$color_footer						: $algae_green;
+$color_footer_p						: $white;
+$color_nav_selected					: $mercury;
+$color_overlay						: $mercury;
+$color_dog_wrapper					: $mintcream;
+$color_dog_container				: $bright_gray;
+$color_form_background				: $white;
+$color_input						: $wild_sand;
+$color_input_disabled				: rgba($emperor, 0.48);
+$color_form_wrong_span				: $tamarillo;
+$color_form_correct_span			: $chambray;
+$color_form_center_check			: $white;
+$color_form_center_submit			: $white;
+$color_form_background_submit		: $chambray;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

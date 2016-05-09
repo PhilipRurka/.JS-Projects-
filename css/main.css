@@ -28,16 +28,25 @@
   font-size: 14px;
   padding: 8px 10px; }
 
+/***********************************************************
+                      	  Colors
+************************************************************/
+/*   3     #    */
+/***********************************
+           Colors-Function
+************************************/
+/*   3     #    */
 .wrapper {
   min-height: calc(100vh - 106px);
   width: 100%; }
   .wrapper header {
+    font-size: 1em;
     text-align: center;
     background-color: #9BE4C8;
     box-shadow: 0px 1px 39px #888888; }
     .wrapper header h1 {
-      margin: 0;
       font-size: 80px;
+      margin: 0;
       padding: 25px 0; }
     .wrapper header ul {
       width: 80%;
@@ -51,8 +60,8 @@
         height: 100%; }
         .wrapper header ul li a {
           text-decoration: none;
-          color: #000;
           font-size: 30px;
+          color: #000;
           position: absolute;
           top: 21px;
           left: 0;
@@ -64,13 +73,14 @@
     position: relative; }
 
 footer {
+  font-size: 1em;
   text-align: center;
   background-color: #9BE4C8;
   box-shadow: 0px -5px 39px #888888; }
   footer p {
     font-size: 40px;
-    color: #fff;
     font-weight: bold;
+    color: #fff;
     padding: 30px 0;
     margin: 0; }
 
@@ -83,18 +93,14 @@ footer {
 /*   3     #    */
 .goat_wrap {
   position: relative; }
-
 .goat_center {
   top: 50%;
   left: 50%; }
-
 .goat_top_right {
   right: 0; }
-
 .goat_bottom_right {
   right: 0;
   bottom: 0; }
-
 .goat_bottom_left {
   bottom: 0; }
 
@@ -110,26 +116,28 @@ footer {
   width: 100%;
   height: 100%; }
   #overlay ul li:first-child {
+    font-size: 1em;
     text-align: center; }
   #overlay ul li {
     list-style: none;
+    font-size: 1em;
     text-align: center; }
     #overlay ul li h10 {
       font-size: 50px; }
   #overlay > p {
     font-size: 30px;
+    line-height: 40px;
     width: 85%;
-    margin: 0 auto;
-    line-height: 40px; }
+    margin: 0 auto; }
   #overlay form {
     bottom: 25px;
     position: absolute;
     width: 100%; }
     #overlay form p {
+      font-size: 31px;
       float: left;
       margin: 0 0 0 12px;
-      display: inline;
-      font-size: 31px; }
+      display: inline; }
     #overlay form input {
       font-size: 30px;
       height: 30px;
@@ -138,9 +146,9 @@ footer {
       display: inline-block;
       float: left; }
     #overlay form button {
+      font-size: 30px;
       height: 36px;
       width: 109px;
-      font-size: 30px;
       float: left;
       display: inline-block; }
 
@@ -148,19 +156,19 @@ footer {
   z-index: 2; }
 
 .goat section {
+  font-size: 1em;
+  text-align: center;
   width: 100%;
   display: inline-block;
-  margin: 0 auto;
-  text-align: center; }
+  margin: 0 auto; }
   .goat section h1 {
-    text-align: center;
-    margin: 0;
-    padding-top: 50px;
     font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
     margin: 0 auto; }
   .goat section p {
-    text-align: center;
     font-size: 25px;
+    text-align: center;
     margin-top: 30px;
     display: block; }
 
@@ -190,38 +198,49 @@ footer {
     width: 80%;
     margin: 0 auto;
     overflow: hidden; }
+    @media (min-width: 1300px) {
+      #bunnies_header nav ul {
+        display: none; } }
     #bunnies_header nav select {
       width: 60%;
       float: left;
       display: none; }
+      @media (min-width: 1300px) {
+        #bunnies_header nav select {
+          display: initial; } }
     #bunnies_header nav button {
       height: 21px;
       width: 43px;
       float: left;
       margin-left: 12px;
       display: none; }
+      @media (min-width: 1300px) {
+        #bunnies_header nav button {
+          display: initial; } }
 
 /***********************************************************
                          Cats Page
 ************************************************************/
 /*   3     #    */
 .cats_container h1 {
-  margin: 50px 0 0;
-  text-align: center; }
+  font-size: 1em;
+  text-align: center;
+  margin: 50px 0 0; }
 .cats_container h2 {
   font-size: 30px;
   margin: 40px 0; }
 .cats_container section ul {
-  list-style-type: none;
+  font-size: 1em;
   text-align: center;
+  list-style-type: none;
   display: inline-block;
   width: 100%;
   margin-top: 70px; }
   .cats_container section ul li {
-    float: left;
-    display: inline-block;
     font-size: 29px;
     text-align: center;
+    float: left;
+    display: inline-block;
     width: 33%;
     margin-top: 110px; }
     .cats_container section ul li p {
@@ -230,12 +249,13 @@ footer {
       width: 20px;
       height: 32px; }
 .cats_container section #submit {
+  font-size: 25px;
   position: absolute;
   display: inline-block;
   left: 50%;
-  margin: 50px 0;
-  font-size: 25px; }
+  margin: 50px 0; }
 .cats_container #select_div {
+  font-size: 1em;
   text-align: center; }
   .cats_container #select_div #cats_select {
     width: 120px;
@@ -265,18 +285,18 @@ footer {
         background-color: #fff;
         border-radius: 7px; }
         .dogs_wrapper .container #section_dogs form p {
+          font-size: 31px;
           width: 100%;
           margin: 0;
           position: relative;
           float: left;
-          display: inline;
-          font-size: 31px; }
+          display: inline; }
           .dogs_wrapper .container #section_dogs form p label {
+            font-size: 16px;
             display: block;
             margin-left: calc(20%/2);
             margin-top: 40px;
-            margin-bottom: 8px;
-            font-size: 16px; }
+            margin-bottom: 8px; }
           .dogs_wrapper .container #section_dogs form p input {
             width: 80%;
             padding: 0;
@@ -284,8 +304,8 @@ footer {
             box-sizing: border-box; }
           .dogs_wrapper .container #section_dogs form p input[type='text'],
           .dogs_wrapper .container #section_dogs form p input[type='password'] {
-            margin: 0 calc((20%/2) - 13px) 0 calc(20%/2);
-            font-size: 42px; }
+            font-size: 42px;
+            margin: 0 calc((20%/2) - 13px) 0 calc(20%/2); }
           .dogs_wrapper .container #section_dogs form p input[type='text'],
           .dogs_wrapper .container #section_dogs form p input[type='password']:not(.disable_gray) {
             background-color: #F5F5F5; }
@@ -331,10 +351,10 @@ footer {
               background-color: #fff;
               border-radius: 50%; }
           .dogs_wrapper .container #section_dogs form p input[type='submit'] {
+            font-size: 25px;
+            font-weight: lighter;
             margin: 44px calc(20%/2) 0;
             height: 70px;
-            font-weight: lighter;
-            font-size: 25px;
             color: #fff;
             background-color: #2F558E; }
 
